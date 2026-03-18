@@ -560,13 +560,7 @@ async function renderBoth(pillars, elements, dm, dateStr) {
   drawSphere(ctx1, SPHERE_CX, SPHERE_CY, SPHERE_R, elements);
   drawText(ctx1, pillars, elements, dm, dateStr, true);
 
-  // ---- Canvas 2: transparent bg ----
-  const c2=document.getElementById('mapCanvasTransp');
-  const ctx2=c2.getContext('2d');
-  ctx2.clearRect(0,0,W,H);
-  // transparent background — no fill
-  drawSphere(ctx2, SPHERE_CX, SPHERE_CY, SPHERE_R, elements);
-  drawText(ctx2, pillars, elements, dm, dateStr, false);
+  
 }
 
 async function generate() {
